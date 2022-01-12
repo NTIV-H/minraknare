@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
       Blank
@@ -6,15 +6,44 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-input  [(ngModel)]="dataeval">
+  
+  </ion-input>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid class="ion-text-center">
+
+    <ion-row>
+      <ion-card tappable>Rad</ion-card>
+      
+      <ion-card tappable>Area triangel</ion-card>
+      <ion-card  tappable>Deg</ion-card>
+      <ion-card tappable>x!</ion-card>
+      <ion-card tappable>(</ion-card>
+      <ion-card tappable>)</ion-card>
+      <ion-card>%</ion-card>
+      <ion-card (click)="inputdata('AC')">AC</ion-card>
+    </ion-row>
+  <ion-row>
+    <ion-card tappable>lnv</ion-card>
+    <ion-card class="sin">sin</ion-card>
+    <ion-card>ln</ion-card>
+    <ion-card tappable (click)="inputdata('7')">7</ion-card>
+    <ion-card tappable (click)="inputdata('8')">8</ion-card>
+    <ion-card tappable (click)="inputdata('9')">9</ion-card>
+    <ion-card tappable (click)="inputdata('/')">/</ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card tappable>lnv</ion-card>
+      <ion-card class="sin">sin</ion-card>
+      <ion-card (click)="inputdata('+')">+</ion-card>
+      <ion-card (click)="inputdata('7')">7</ion-card>
+      <ion-card (click)="inputdata('=')">=</ion-card>
+      <ion-card>9</ion-card>
+      <ion-card>/</ion-card>
+      </ion-row>
+  </ion-grid>
+ 
+ 
+ 
 </ion-content>
